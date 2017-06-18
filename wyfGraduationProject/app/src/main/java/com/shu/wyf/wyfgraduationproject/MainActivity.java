@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements
     private CustomProgressDialog dialog = null;   //dialog is a instance of CustomProgressDialog
     private ParseFromJsonClass parseFromJsonClass = null;
     static TextView mRecognisedTextView;
-    static TextView tv_data;
     private char mRecgs[] = new char[100];
     private int mRecgCount;
     private static String strReg = "";
@@ -81,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements
 
         requestPermission();
         parseFromJsonClass = new ParseFromJsonClass();
-        tv_data = (TextView) findViewById(R.id.tv_data);
 
         Button recognitionStart = (Button) findViewById(R.id.start_reg);
         recognitionStart.setOnClickListener(new View.OnClickListener() {

@@ -1,35 +1,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@drawable/bg">
 
+    <TextView
+        android:padding="10dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:id="@+id/regtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/init_str"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:orientation="vertical" >
-
+        android:layout_margin="60dp"
+        android:orientation="horizontal" >
         <Button
             android:id="@+id/start_reg"
+            android:background="@color/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="开始接收" />
 
         <Button
             android:id="@+id/stop_reg"
+            android:background="@color/button"
+            android:layout_marginLeft="70dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="停止接收" />
 
-        <TextView
-            android:id="@+id/regtext"
-            android:layout_width="wrap_content"
-            android:layout_height="62dp"
-            android:scrollbars="vertical"
-            android:text="recognised text"
-             />
     </LinearLayout>
-
-
 </LinearLayout>
