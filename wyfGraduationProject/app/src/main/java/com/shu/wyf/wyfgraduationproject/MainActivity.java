@@ -80,14 +80,14 @@ public class MainActivity extends AppCompatActivity implements
 
         requestPermission();
         parseFromJsonClass = new ParseFromJsonClass();
-
+/*
         Button recognitionStart = (Button) findViewById(R.id.start_reg);
         recognitionStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                /******************************************************/
+
                 mRecognition.start(TOKEN_LEN, mIsReadFromFile);
-                /******************************************************/
+
             }
         });
 
@@ -95,11 +95,12 @@ public class MainActivity extends AppCompatActivity implements
         recognitionStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                /******************************************************/
+
                 mRecognition.stop();
-                /******************************************************/
+
             }
         });
+        */
     }
 
     /*
@@ -112,6 +113,14 @@ public class MainActivity extends AppCompatActivity implements
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
 
+        }
+        try {
+            /******************************************************/
+            //this method is the start of Recognition,which is called when onResume
+            mRecognition.start(TOKEN_LEN, mIsReadFromFile);
+            /******************************************************/
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
